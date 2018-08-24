@@ -17,6 +17,9 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  plugins: [
+    { src: '~plugins/vue-infinite-scroll', ssr: false }
+  ],
   /*
   ** Build configuration
   */

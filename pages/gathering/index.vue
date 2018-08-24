@@ -45,228 +45,23 @@
             <div class="clearfix"></div>
         </div>
 
-        <div class="activity-list">
+        <div class="activity-list" v-infinite-scroll="loadMore">
             <ul class="activity">
 
-                <li class="activity-item">
+                <li class="activity-item" v-for="(item,index) in items" :key="index">
                     <div class="activity-inner">
                         <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
+                        <div class="img">
+                            <a :href="'/gathering/item/' + item.id" target="_blank">
+                                <!-- <img src="~/assets/img/widget-activity1.png" alt=""> -->
+                                <img :src="item.image" alt=""/>
+                            </a>
                         </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity2.png" alt=""></a></div>
                         <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
+                            <p class="title" v-text="item.name">APMCon2017中国应用性能管理大会</p>
                             <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">活动结束</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity3.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">活动进行中</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity5.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity4.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">活动进行中</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity5.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity3.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
-                            </div>
-                            <div class="fr btn">
-                                <span class="sui-btn btn-bao">立即报名</span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="activity-item">
-                    <div class="activity-inner">
-                        <a href="http://"></a>
-                        <div class="img"><a href="~/assets/activity-detail.html" target="_blank"><img
-                                src="~/assets/img/widget-activity1.png" alt=""></a></div>
-                        <div class="text">
-                            <p class="title">APMCon2017中国应用性能管理大会</p>
-                            <div class="fl goin">
-                                <p>时间：2017-07-29 周六</p>
-                                <p>城市：广州</p>
+                                <p v-text="item.starttime">时间：2017-07-29 周六</p>
+                                <p v-text="item.address">城市：广州</p>
                             </div>
                             <div class="fr btn">
                                 <span class="sui-btn btn-bao">立即报名</span>
@@ -285,9 +80,29 @@
     </div>
 </template>
 <script>
-import '~/assets/css/page-sj-activity-index.css'
-export default{
-
-}
+import "~/assets/css/page-sj-activity-index.css";
+import gatheringApi from "@/api/gathering";
+export default {
+  asyncData() {
+    return gatheringApi.search(1, 12, { state: "1" }).then(resp => {
+      return {
+        items: resp.data.data.rows
+      };
+    });
+  },
+  data() {
+    return {
+      pageNo: 1
+    };
+  },
+  methods: {
+    loadMore() {
+      this.pageNo++;
+      gatheringApi.search(this.pageNo, 12, { state: "1" }).then(resp => {
+        this.items = this.items.concat(resp.data.data.rows);
+      });
+    }
+  }
+};
 </script>
 

@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_vueinfinitescroll_8d6badb0 from 'nuxt_plugin_vueinfinitescroll_8d6badb0' // Source: ../plugins/vue-infinite-scroll (ssr: false)
 
 
 // Component: <no-ssr>
@@ -134,6 +135,9 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   
+  if (process.browser) { 
+    if (typeof nuxt_plugin_vueinfinitescroll_8d6badb0 === 'function') await nuxt_plugin_vueinfinitescroll_8d6badb0(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
