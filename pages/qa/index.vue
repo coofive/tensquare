@@ -9,7 +9,7 @@
          <li><a href="#python" data-toggle="tab">Python</a></li> 
          <li><a href="#java" data-toggle="tab">Java</a></li> 
        </ul> 
-       <span class="fr more"><a href="./qa-allTag.html" target="_blank">更多</a></span> 
+       <span class="fr more"><a href="~/assets/qa-allTag.html" target="_blank">更多</a></span> 
        <div class="clearfix"></div> 
      </div> 
    </div> 
@@ -44,7 +44,7 @@
            <div class="fl info"> 
              <div class="question"> 
               <p class="author"><span class="name">luckness</span><span>3</span>分钟前回答</p> 
-              <p class="title"><a href="./qa-detail.html" target="_blank">有关PHP初级进阶的问题？</a></p> 
+              <p class="title"><a href="~/assets/qa-detail.html" target="_blank">有关PHP初级进阶的问题？</a></p> 
             </div> 
             <div class="other"> 
               <ul class="fl sui-tag"> 
@@ -73,7 +73,7 @@
        <div class="fl info"> 
          <div class="question"> 
           <p class="author"><span class="name">牛奶糖</span><span>3</span>分钟前回答</p> 
-          <p class="title"><a href="./qa-detail.html" target="_blank">springMVC的controller接收json数据失败</a></p> 
+          <p class="title"><a href="~/assets/qa-detail.html" target="_blank">springMVC的controller接收json数据失败</a></p> 
         </div> 
         <div class="other"> 
           <ul class="fl sui-tag"> 
@@ -102,7 +102,7 @@
    <div class="fl info"> 
      <div class="question"> 
       <p class="author"><span class="name">大白兔</span><span>3</span>分钟前回答</p> 
-      <p class="title"><a href="./qa-detail.html" target="_blank">监听器中timer查询数据库</a></p> 
+      <p class="title"><a href="~/assets/qa-detail.html" target="_blank">监听器中timer查询数据库</a></p> 
     </div> 
     <div class="other"> 
       <ul class="fl sui-tag"> 
@@ -131,7 +131,7 @@
 <div class="fl info"> 
  <div class="question"> 
   <p class="author"><span class="name">luckness</span><span>3</span>分钟前回答</p> 
-  <p class="title"><a href="./qa-detail.html" target="_blank">服务器上安装了一个考试系统ASP.NET,安装完成后访问不了，求助</a></p> 
+  <p class="title"><a href="~/assets/qa-detail.html" target="_blank">服务器上安装了一个考试系统ASP.NET,安装完成后访问不了，求助</a></p> 
 </div> 
 <div class="other"> 
   <ul class="fl sui-tag"> 
@@ -160,7 +160,7 @@
 <div class="fl info"> 
  <div class="question"> 
   <p class="author"><span class="name">牛奶糖</span><span>3</span>分钟前回答</p> 
-  <p class="title"><a href="./qa-detail.html" target="_blank">springMVC的controller接收json数据失败</a></p> 
+  <p class="title"><a href="~/assets/qa-detail.html" target="_blank">springMVC的controller接收json数据失败</a></p> 
 </div> 
 <div class="other"> 
   <ul class="fl sui-tag"> 
@@ -189,7 +189,7 @@
 <div class="fl info"> 
  <div class="question"> 
   <p class="author"><span class="name">大白兔</span><span>3</span>分钟前回答</p> 
-  <p class="title"><a href="./qa-detail.html" target="_blank">监听器中timer查询数据库</a></p> 
+  <p class="title"><a href="~/assets/qa-detail.html" target="_blank">监听器中timer查询数据库</a></p> 
 </div> 
 <div class="other"> 
   <ul class="fl sui-tag"> 
@@ -231,7 +231,7 @@
 <div class="fl right-tag"> 
   <div class="block-btn"> 
    <p>今天，有什么好东西要和大家分享么?</p> 
-   <a class="sui-btn btn-block btn-share" href="./qa-submit.html" target="_blank">发布分享</a> 
+   <a class="sui-btn btn-block btn-share" href="~/assets/qa-submit.html" target="_blank">发布分享</a> 
  </div> 
  <div class="hot-tags"> 
    <div class="head"> 
@@ -254,3 +254,10 @@
 </div> 
 </div>
 </template>
+<script>
+import '~/assets/css/page-sj-qa-logined.css'
+export default {
+  
+}
+</script>
+

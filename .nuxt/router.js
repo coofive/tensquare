@@ -3,10 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _62bb987e = () => import('../pages/recruit/index.vue' /* webpackChunkName: "pages/recruit/index" */).then(m => m.default || m)
-const _84c56e72 = () => import('../pages/gathering/index.vue' /* webpackChunkName: "pages/gathering/index" */).then(m => m.default || m)
+const _d789a044 = () => import('../pages/spit/index.vue' /* webpackChunkName: "pages/spit/index" */).then(m => m.default || m)
 const _34c10e66 = () => import('../pages/qa/index.vue' /* webpackChunkName: "pages/qa/index" */).then(m => m.default || m)
-const _1fc70cd9 = () => import('../pages/gathering/item/_id.vue' /* webpackChunkName: "pages/gathering/item/_id" */).then(m => m.default || m)
+const _84c56e72 = () => import('../pages/gathering/index.vue' /* webpackChunkName: "pages/gathering/index" */).then(m => m.default || m)
+const _711c9a15 = () => import('../pages/friends/index.vue' /* webpackChunkName: "pages/friends/index" */).then(m => m.default || m)
+const _62bb987e = () => import('../pages/recruit/index.vue' /* webpackChunkName: "pages/recruit/index" */).then(m => m.default || m)
 const _076d91e2 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -68,14 +69,9 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/recruit",
-			component: _62bb987e,
-			name: "recruit"
-		},
-		{
-			path: "/gathering",
-			component: _84c56e72,
-			name: "gathering"
+			path: "/spit",
+			component: _d789a044,
+			name: "spit"
 		},
 		{
 			path: "/qa",
@@ -83,9 +79,19 @@ export function createRouter () {
 			name: "qa"
 		},
 		{
-			path: "/gathering/item/:id?",
-			component: _1fc70cd9,
-			name: "gathering-item-id"
+			path: "/gathering",
+			component: _84c56e72,
+			name: "gathering"
+		},
+		{
+			path: "/friends",
+			component: _711c9a15,
+			name: "friends"
+		},
+		{
+			path: "/recruit",
+			component: _62bb987e,
+			name: "recruit"
 		},
 		{
 			path: "/",
