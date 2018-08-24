@@ -3,10 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _713878e8 = () => import('../pages/recruit/index.vue' /* webpackChunkName: "pages/recruit/index" */).then(m => m.default || m)
-const _ce322f56 = () => import('../pages/gathering/index.vue' /* webpackChunkName: "pages/gathering/index" */).then(m => m.default || m)
-const _4734caea = () => import('../pages/gathering/item/_id.vue' /* webpackChunkName: "pages/gathering/item/_id" */).then(m => m.default || m)
-const _595c501d = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _62bb987e = () => import('../pages/recruit/index.vue' /* webpackChunkName: "pages/recruit/index" */).then(m => m.default || m)
+const _84c56e72 = () => import('../pages/gathering/index.vue' /* webpackChunkName: "pages/gathering/index" */).then(m => m.default || m)
+const _34c10e66 = () => import('../pages/qa/index.vue' /* webpackChunkName: "pages/qa/index" */).then(m => m.default || m)
+const _1fc70cd9 = () => import('../pages/gathering/item/_id.vue' /* webpackChunkName: "pages/gathering/item/_id" */).then(m => m.default || m)
+const _076d91e2 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -68,22 +69,27 @@ export function createRouter () {
     routes: [
 		{
 			path: "/recruit",
-			component: _713878e8,
+			component: _62bb987e,
 			name: "recruit"
 		},
 		{
 			path: "/gathering",
-			component: _ce322f56,
+			component: _84c56e72,
 			name: "gathering"
 		},
 		{
+			path: "/qa",
+			component: _34c10e66,
+			name: "qa"
+		},
+		{
 			path: "/gathering/item/:id?",
-			component: _4734caea,
+			component: _1fc70cd9,
 			name: "gathering-item-id"
 		},
 		{
 			path: "/",
-			component: _595c501d,
+			component: _076d91e2,
 			name: "index"
 		}
     ],
