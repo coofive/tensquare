@@ -70,6 +70,8 @@
       <div class="other-methods"> 
       </div> 
      </form> 
+     <!-- 扫码登录 -->
+     <div id="weixin"></div>
     </div> 
    </div> 
   </div>   
@@ -77,7 +79,7 @@
 <script>
 import "~/assets/css/page-sj-person-loginsign.css";
 import userApi from "@/api/user";
-import {setUser} from '@/utils/auth';
+import { setUser } from "@/utils/auth";
 export default {
   data() {
     return {
@@ -115,10 +117,14 @@ export default {
     login() {
       userApi.login(this.mobile, this.password).then(resp => {
         if (resp.data.flag) {
-            // 保存用户信息
-            setUser(resp.data.data.token, resp.data.data.name, resp.data.data.avatar)
+          // 保存用户信息
+          setUser(
+            resp.data.data.token,
+            resp.data.data.name,
+            resp.data.data.avatar
+          );
 
-            location.href = "/";
+          location.href = "/";
         } else {
           this.$message({
             message: resp.data.message,
@@ -129,6 +135,19 @@ export default {
         }
       });
     }
+  },
+  mounted() {
+    var obj = new WxLogin({
+      id: "weixin",
+      appid: "wx3bdb1192c22883f3",
+      scope: "snsapi_login",
+      redirect_uri: "http://note.java.itcast.cn/weixinlogin"
+    });
+  },
+  head: {
+    script: [
+      { src: "http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js" }
+    ]
   }
 };
 </script>
