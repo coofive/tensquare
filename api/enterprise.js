@@ -43,5 +43,11 @@ export default {
       url: `/${group_name}/${api_name}/${id}`,
       method: 'delete'
     })
+  },
+  hotList() {
+    return request({
+      url: `/${group_name}/${api_name}/search/hotList`,
+      method: 'get'
+    })
   }
 }

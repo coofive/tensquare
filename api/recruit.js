@@ -43,5 +43,17 @@ export default {
       url: `/${group_name}/${api_name}/${id}`,
       method: 'delete'
     })
+  },
+  recommend() {
+    return request({
+      url: `/${group_name}/${api_name}/search/recommend`,
+      method: 'get'
+    })
+  },
+  newList() {
+    return request({
+      url: `/${group_name}/${api_name}/search/newList`,
+      method: 'get'
+    })
   }
 }

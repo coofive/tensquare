@@ -5,7 +5,7 @@
           <div class="wrapper">
             <div class="sui-navbar">
                 <div class="navbar-inner">
-                  <a href="index-logined.html" class="sui-brand"><img src="~/assets/img/asset-logo-black.png" alt="社交"/></a>
+                  <a href="/" class="sui-brand"><img src="~/assets/img/asset-logo-black.png" alt="社交"/></a>
                   <ul class="sui-nav">
                     <router-link to="/" tag="li" active-class="active" exact><a>头条</a></router-link>
                     <router-link to="/qa" tag="li" active-class="active"><a>问答</a></router-link>
@@ -28,13 +28,22 @@
                           <li><i class="fa fa-heartbeat" aria-hidden="true"></i> <a href="~/assets/makeFriends-submit.html" target="_blank">发约会</a></li>
                         </ul>
                       </li>
-                      <li><a href="~/assets/person-homepage.html" target="_blank" class="homego"><img src="~/assets/img/widget-photo.png" alt="用户头像"></a></li> 
+                      <!-- 判断用户是否登录 -->
+                      <div class="sui-nav pull-right into" v-if="user.name === undefined">
+                        <li><router-link to="/person/login">登录</router-link></li>
+                      </div>
+                      <div class="sui-nav pull-right into" v-else>
+                        <li><a href="#" class="notice" v-text="user.name"></a></li>
+                        <li><a href="#" class="homego"><img :src="user.avatar" width="50px" height="50px" :alt="user.name"></a></li>
+                        <li><a @click="loginOut" class="notice">退出登录</a></li>
+                      </div>
                   </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+      <!-- 路由 -->
       <nuxt/>
       <footer>
         <!--底部版权-->
@@ -83,13 +92,30 @@
   </div>
 </template>
 <script>
-import '~/assets/plugins/normalize-css/normalize.css'
-import '~/assets/plugins/yui/cssgrids-min.css'
-import '~/assets/plugins/sui/sui.min.css'
-import '~/assets/plugins/sui/sui-append.min.css'
-import '~/assets/plugins/font-awesome/css/font-awesome.min.css'
-import '~/assets/css/widget-base.css'
-import '~/assets/css/widget-head-foot.css'
+import "~/assets/plugins/normalize-css/normalize.css";
+import "~/assets/plugins/yui/cssgrids-min.css";
+import "~/assets/plugins/sui/sui.min.css";
+import "~/assets/plugins/sui/sui-append.min.css";
+import "~/assets/plugins/font-awesome/css/font-awesome.min.css";
+import "~/assets/css/widget-base.css";
+import "~/assets/css/widget-head-foot.css";
+import { getUser } from "@/utils/auth";
+import { removeUser } from '@/utils/auth';
 export default {
-}
+  data() {
+    return {
+      user: {}
+    };
+  },
+  created() {
+    this.user = getUser();
+  },
+  methods: {
+    loginOut(){
+        // 清除用户登录信息
+        removeUser();
+        location.href = '/person/login'
+    }
+  }
+};
 </script>
